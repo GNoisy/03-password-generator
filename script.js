@@ -45,6 +45,7 @@ function generatePassword() {
   //collect randomly generated selections from each array
   
   //create var to store random password
+  var password = " ";
 }
 
 
