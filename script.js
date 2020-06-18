@@ -38,14 +38,30 @@ function generatePassword() {
   }
 
   //use method or function that randomly selects characters from specific arrays
-  function selectChar(x) {
-    return x[Math.floor(Math.random() * x.length)];
+  function selectChar(array) {
+    return array[Math.floor(Math.random() * array.length)];
   }
 
-  //collect randomly generated selections from each array
-  
   //create var to store random password
   var password = " ";
+
+  //collect randomly generated selections from each array
+  for (var i = 0; i < password.length; i++) {
+    if (wantUpper && password.length < passLength) {
+    password += selectChar(upperCase);
+    }
+    if (wantLower && password.length < passLength) {
+    password += selectChar(lowerCase);
+    }
+    if (wantNums && password.length < passLength) {
+    password += selectChar(numbers);
+    }
+    if (wantSpecCharac && password.length < passLength) {
+    password += selectChar(specialCharacter);
+    }
+}
+  
+  
 }
 
 
