@@ -29,9 +29,21 @@ function generatePassword() {
 
   //create if statements that check which character to be included and limit length of  password
   var pwLength = parseInt(prompt("Choose a password length between 8 and 128"));
- 
+    
+  //validate prompt from user
+  if (pwLength < 8 || pwLength > 128) {
+      alert("Choose the correct length!");
+  } else { 
+      alert("Your password length is " + pwLength);
+  }
+
   //use method or function that randomly selects characters from specific arrays
+  function selectChar(x) {
+    return x[Math.floor(Math.random() * x.length)];
+  }
+
   //collect randomly generated selections from each array
+  
   //create var to store random password
 }
 
