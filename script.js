@@ -28,7 +28,8 @@ function generatePassword() {
   var wantSpecChar = prompt("Do you want to include special characters?");
 
   //create if statements that check which character to be included and limit length of  password
-  var pwLength = prompt("Choose a password length between 8 and 128");
+  var pwLength = parseInt(prompt("Choose a password length between 8 and 128"));
+ 
   //use method or function that randomly selects characters from specific arrays
   //collect randomly generated selections from each array
   //create var to store random password
