@@ -47,16 +47,16 @@ function generatePassword() {
 
   //collect randomly generated selections from each array
   for (var i = 0; i < password.length; i++) {
-    if (wantUpper && password.length < passLength) {
+    if (wantUpperCase && password.length < passLength) {
     password += selectChar(upperCase);
     }
-    if (wantLower && password.length < passLength) {
+    if (wantLowerCase && password.length < passLength) {
     password += selectChar(lowerCase);
     }
-    if (wantNums && password.length < passLength) {
+    if (wantNumbers && password.length < passLength) {
     password += selectChar(numbers);
     }
-    if (wantSpecCharac && password.length < passLength) {
+    if (wantSpecChar && password.length < passLength) {
     password += selectChar(specialCharacter);
     }
 }
