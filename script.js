@@ -22,10 +22,10 @@ var specialCharacter = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "/", ":", "
 
 function generatePassword() {
   //get user inputs for prompts
-  var wantUpperCase = prompt("Do you want to include uppercase letters?");
-  var wantLowerCase = prompt("Do you want to include lowercase letters?");
-  var wantNumbers = prompt("Do you want to include numbers?");
-  var wantSpecChar = prompt("Do you want to include special characters?");
+  var wantUpperCase = confirm("Do you want to include uppercase letters?");
+  var wantLowerCase = confirm("Do you want to include lowercase letters?");
+  var wantNumbers = confirm("Do you want to include numbers?");
+  var wantSpecChar = confirm("Do you want to include special characters?");
 
   //create if statements that check which character to be included and limit length of  password
   var pwLength = parseInt(prompt("Choose a password length between 8 and 128"));
@@ -39,24 +39,24 @@ function generatePassword() {
 
   //use method or function that randomly selects characters from specific arrays
   function selectChar(array) {
-    return array[Math.floor(Math.random() * array.length) + 1];
+    return array[Math.floor(Math.random() * array.length)];
   }
 
   //create var to store random password
-  var password = " ";
+  var password = "";
 
   //collect randomly generated selections from each array
-  for (var i = 0; i < password.length; i++) {
-    if (wantUpperCase && password.length < pwLength) {
+  for (var i = 0; i < pwLength.length; i++) {
+    if (wantUpperCase && pwLength.length < pwLength) {
     password += selectChar(upperCase);
     }
-    if (wantLowerCase && password.length < pwLength) {
+    if (wantLowerCase && pwLength.length < pwLength) {
     password += selectChar(lowerCase);
     }
-    if (wantNumbers && password.length < pwLength) {
+    if (wantNumbers && pwLength.length < pwLength) {
     password += selectChar(numbers);
     }
-    if (wantSpecChar && password.length < pwLength) {
+    if (wantSpecChar && pwLength.length < pwLength) {
     password += selectChar(specialCharacter);
     }
   }
