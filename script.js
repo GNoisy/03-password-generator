@@ -18,14 +18,17 @@ var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacter = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "/", ":", ";", "<", "=", ">", "?", "@",];
 
-var wantUpperCase = prompt("Do you want to include uppercase letters?");
-var wantLowerCase = prompt("Do you want to include lowercase letters?");
-var wantNumbers = prompt("Do you want to include numbers?");
-var wantSpecChar = prompt("Do you want to include special characters?");
+
 
 function generatePassword() {
   //get user inputs for prompts
+  var wantUpperCase = prompt("Do you want to include uppercase letters?");
+  var wantLowerCase = prompt("Do you want to include lowercase letters?");
+  var wantNumbers = prompt("Do you want to include numbers?");
+  var wantSpecChar = prompt("Do you want to include special characters?");
+
   //create if statements that check which character to be included and limit length of  password
+  var pwLength = prompt("Choose a password length between 8 and 128");
   //use method or function that randomly selects characters from specific arrays
   //collect randomly generated selections from each array
   //create var to store random password
