@@ -1,6 +1,6 @@
 # Password-Generator
 
-![screenshot](AboutMePage.png)
+![screenshot](password_gen.png)
 
 This is an application that runs in browser that, based upon input from the user, generates a random password. 
 
@@ -33,5 +33,6 @@ https://flight-manual.atom.io/getting-started/sections/installing-atom/
 
 ### Acknowledgments
 
+* Stack Overflow
 * MDN 
 * w3schools
