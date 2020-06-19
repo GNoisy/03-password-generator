@@ -46,20 +46,21 @@ function generatePassword() {
   var password = "";
 
   //collect randomly generated selections from each array
-  for (var i = 0; i < pwLength.length; i++) {
-    if (wantUpperCase && pwLength.length < pwLength) {
+  for (var i = 0; i < pwLength; i++) {
+    if (wantUpperCase && password.length < pwLength) {
     password += selectChar(upperCase);
     }
-    if (wantLowerCase && pwLength.length < pwLength) {
+    if (wantLowerCase && password.length < pwLength) {
     password += selectChar(lowerCase);
     }
-    if (wantNumbers && pwLength.length < pwLength) {
+    if (wantNumbers && password.length < pwLength) {
     password += selectChar(numbers);
     }
-    if (wantSpecChar && pwLength.length < pwLength) {
+    if (wantSpecChar && password.length < pwLength) {
     password += selectChar(specialCharacter);
     }
   }
+
   
   
 }
